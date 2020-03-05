@@ -1,4 +1,3 @@
-
 <?php
 if(isset($_POST['submit']))
 {
@@ -6,5 +5,4 @@ if(isset($_POST['submit']))
     $deleted = setcookie('logdin', '', time() - 3600);
     header("Location: index.php");
 }
-
 ?>
