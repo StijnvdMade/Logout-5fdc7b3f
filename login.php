@@ -1,4 +1,10 @@
+<nav>
+<form action="logout.php" method="post">
+<input class="logout" type="submit" name="submit" value="Logout">
+</form>
+</nav>
 <?php
+
 $host = '127.0.0.1';
 $db   = 'netland';
 $user = 'root';

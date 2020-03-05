@@ -1,3 +1,8 @@
+<nav>
+<form action="logout.php" method="post">
+<input class="logout" type="submit" name="submit" value="Logout">
+</form>
+</nav>
 <?php
 if (!isset($_COOKIE['logdin'])) {
     header("Location: index.php");
@@ -28,16 +33,16 @@ $id = htmlspecialchars($_GET["id"]);
 $info = $pdo->query('SELECT * FROM media WHERE id = ' . $_GET['id']);
 ?>
 <form action="editmedia.php" method="post">
-<?php
-foreach ($info as $show) {
-    foreach ($show as $key => $value) {
-        if ($key != 'id') {
-            echo $key;
-            echo "<textarea type=text name='$key'> $value</textarea><br/>";
+    <?php
+    foreach ($info as $show) {
+        foreach ($show as $key => $value) {
+            if ($key != 'id') {
+                echo $key;
+                echo "<textarea type=text name='$key'> $value</textarea><br/>";
+            }
         }
     }
-}
-?>
-<input type="hidden" name="id" value=<?php echo $id;?>>
-<input type="submit" name="submit">
+    ?>
+    <input type="hidden" name="id" value=<?php echo $id; ?>>
+    <input type="submit" name="submit">
 </form>

@@ -1,4 +1,8 @@
-
+<nav>
+<form action="logout.php" method="post">
+<input class="logout" type="submit" name="submit" value="Logout">
+</form>
+</nav>
 <?php
 if (!isset($_COOKIE['logdin'])) {
     header("Location: index.php");
@@ -25,7 +29,7 @@ if (!isset($_COOKIE['logdin'])) {
     <textarea name="description" cols="30" rows="10"></textarea>
     <br></br>
     <label for="youtube_trailer_id">Trailer id</label>
-    <input type="text" name="youtube_trailer_id"> 
+    <input type="text" name="youtube_trailer_id">
     <br></br>
     <label for="rating">Rating</label>
     <input type="text" name="rating">

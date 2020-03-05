@@ -1,3 +1,8 @@
+<nav>
+<form action="logout.php" method="post">
+<input class="logout" type="submit" name="submit" value="Logout">
+</form>
+</nav>
 <?php
 if (!isset($_COOKIE['logdin'])) {
     header("Location: index.php");

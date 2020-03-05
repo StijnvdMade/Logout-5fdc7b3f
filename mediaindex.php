@@ -1,3 +1,8 @@
+<nav>
+<form action="logout.php" method="post">
+<input class="logout" type="submit" name="submit" value="Logout">
+</form>
+</nav>
 <?php
 if (!isset($_COOKIE['logdin'])) {
     header("Location: index.php");
@@ -25,7 +30,7 @@ echo $pdo->query('select version()')->fetchColumn();
 $stmt = $pdo->query('SELECT * FROM netland.media;');
 while ($row = $stmt->fetch()) {
     echo "<br/>" . $row['title'] . "<a href='media.php?id=" . $row['id'] . "'>edit info</a>";
-}  
+}
 ?>
 <html>
 
